@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace RentBook.Data.Migrations
+namespace RentBook.DataAccess.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Models;
+using RentBook.Models;
 
-namespace RentBook.Data
+namespace RentBook.DataAccess.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
@@ -14,5 +14,6 @@ namespace RentBook.Data
         {
         }
         public DbSet<Book> Books { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
     }
 }

@@ -59,8 +59,9 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    color: #494a4d;
 }
 .footer {
   position: absolute;
@@ -68,4 +69,33 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+}
+header {
+    background-color: #c0f0ee;
+}
+.title {
+    font-family: 'Parisienne', cursive;
+    text-decoration: none;
+    color: #494a4d;
+    font-size: 300%;
+}
+.title:hover {
+    text-decoration: none;
+    color: #2c2c2e;
+}
+.navbarLink {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:120%;
+}
+.footerBg {
+    background-color: #e1f5f4;
+}
+.Roboto {
+    font-family: 'Roboto', sans-serif;
+}
+.tableHead {
+    background-color: #d5f2f0;
+}
+.formStyles {
+    width:40%;
 }

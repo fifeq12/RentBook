@@ -6,12 +6,13 @@
     <title>@ViewData["Title"] - RentBook</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Parisienne&family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbarStyle navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">RentBook</a>
+                <a class="title mr-3" asp-area="User" asp-controller="Home" asp-action="Index"><b>RentBook</b></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,10 +21,7 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">test</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link navbarLink" asp-area="User" asp-route-id="new" asp-controller="Book" asp-action="EditOrAdd"><b>DODAJ KSIĄŻKĘ</b> <i class="fas fa-plus"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -36,13 +34,14 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - RentBook - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="border-top footer text-muted footerBg Roboto">
+        <div class="container text-center">
+            &copy; 2020 - RentBook
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/4eeb01117f.js" crossorigin="anonymous"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>

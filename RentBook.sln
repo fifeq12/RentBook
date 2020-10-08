@@ -3,18 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentBook", "RentBook\RentBook.csproj", "{2E1E710C-B524-4CF7-BD5C-4E215BD3A02F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentBook", "RentBook\RentBook.csproj", "{2E1E710C-B524-4CF7-BD5C-4E215BD3A02F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E71F6383-C4FB-4B81-980B-20C3C1DA1527} = {E71F6383-C4FB-4B81-980B-20C3C1DA1527}
 		{DD4806A9-86FC-4113-B572-4C255D3DE13C} = {DD4806A9-86FC-4113-B572-4C255D3DE13C}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{E71F6383-C4FB-4B81-980B-20C3C1DA1527}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentBook.DataAccess", "DataAccess\RentBook.DataAccess.csproj", "{E71F6383-C4FB-4B81-980B-20C3C1DA1527}"
 	ProjectSection(ProjectDependencies) = postProject
 		{DD4806A9-86FC-4113-B572-4C255D3DE13C} = {DD4806A9-86FC-4113-B572-4C255D3DE13C}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{DD4806A9-86FC-4113-B572-4C255D3DE13C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentBook.Models", "Models\RentBook.Models.csproj", "{DD4806A9-86FC-4113-B572-4C255D3DE13C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -12,11 +12,12 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
-    <ProjectReference Include="..\Models\Models.csproj" />
+    <ProjectReference Include="..\DataAccess\RentBook.DataAccess.csproj" />
+    <ProjectReference Include="..\Models\RentBook.Models.csproj" />
   </ItemGroup>
 
 </Project>

@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using RentBook.Data;
+using RentBook.DataAccess.Data;
 
 namespace RentBook
 {
@@ -30,7 +30,7 @@ namespace RentBook
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<IdentityUser>().AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
@@ -62,7 +62,7 @@ namespace RentBook
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{area=User}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }
