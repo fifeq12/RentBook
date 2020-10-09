@@ -99,3 +99,10 @@ header {
 .formStyles {
     width:40%;
 }
+.customButton {
+    background-color: #ace9f2;
+    border: 1px solid #b6d7f0;
+}
+    .customButton:hover {
+        background-color: #99e5f0;
+    }

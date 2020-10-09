@@ -2,72 +2,70 @@
 
 @if (Model != null)
 {
-    <h1>Edycja książki</h1>
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <form asp-action="EditOrAdd" asp-route-id="@Model.Id">
-        <div class="form-group d-flex flex-column">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Nazwa</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control formStyles" value="@Model.Name" asp-for="@Model.Name">
-                <span asp-validation-for="@Model.Name" class="text-danger"></span>
-            </div>
+    <div class="container pt-5">
+        <div class="col-xl-6 col-sm-8 offset-sm-1 offset-xl-3 text-center Roboto">
+            <form asp-action="EditOrAdd">
+                <h1><b>Edycja książki</b></h1>
+                <hr />
+                <div class="form-group">
+                    <label><b>Nazwa</b></label>
+                    <input asp-for="@Model.Name" value="@Model.Name" class="form-control d-flex justify-content-center" />
+                    <span asp-validation-for="@Model.Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label><b>Autor</b></label>
+                    <input asp-for="@Model.Author" value="@Model.Author" class="form-control" />
+                    <span asp-validation-for="@Model.Author" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label><b>Data wydania</b></label>
+                    <input asp-for="@Model.ReleaseDate" value="@Model.ReleaseDate" class="form-control" />
+                    <span asp-validation-for="@Model.ReleaseDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label><b>Opis</b></label>
+                    <input asp-for="@Model.Description" value="@Model.Description" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="customButton p-2 pl-5 pr-5"><b>Edytuj</b></button>
+                </div>
+            </form>
         </div>
-        <div class="form-group d-flex flex-column">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Autor</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control formStyles" value="@Model.Author" asp-for="@Model.Author">
-                <span asp-validation-for="@Model.Author" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="form-group d-flex flex-column">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Rok wydania</label>
-            <div class="col-sm-10">
-                <input type="number" class="form-control formStyles" value="@Model.ReleaseDate" asp-for="@Model.ReleaseDate">
-                <span asp-validation-for="@Model.ReleaseDate" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="form-group d-flex flex-column">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Opis</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control formStyles" value="@Model.Description" asp-for="@Model.Description">
-            </div>
-        </div>
-        <button type="submit" class="btn btn-primary mb-2">Edytuj</button>
-    </form>
+    </div>
 }
 else
 {
-    <h1>Dodawanie nowej książki</h1>
-    <form asp-action="EditOrAdd">
-        <div class="form-group d-flex flex-column">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Nazwa</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control formStyles" asp-for="@Model.Name">
-                <span asp-validation-for="@Model.Name" class="text-danger"></span>
-            </div>
+    <div class="container pt-5">
+        <div class="col-xl-6 col-sm-8 offset-sm-1 offset-xl-3 text-center Roboto">
+            <form asp-action="EditOrAdd">
+                <h1><b>Dodawanie nowej książki</b></h1>
+                <hr />
+                <div class="form-group">
+                    <label><b>Nazwa</b></label>
+                    <input asp-for="@Model.Name" class="form-control d-flex justify-content-center" />
+                    <span asp-validation-for="@Model.Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label><b>Autor</b></label>
+                    <input asp-for="@Model.Author" class="form-control" />
+                    <span asp-validation-for="@Model.Author" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label><b>Data wydania</b></label>
+                    <input asp-for="@Model.ReleaseDate" class="form-control" />
+                    <span asp-validation-for="@Model.ReleaseDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label><b>Opis</b></label>
+                    <input asp-for="@Model.Description" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="customButton p-2 pl-5 pr-5"><b>Dodaj</b></button>
+                </div>
+            </form>
         </div>
-        <div class="form-group d-flex flex-column">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Autor</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control formStyles" asp-for="@Model.Author">
-                <span asp-validation-for="@Model.Author" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="form-group d-flex flex-column">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Rok wydania</label>
-            <div class="col-sm-10">
-                <input type="number" class="form-control formStyles" asp-for="@Model.ReleaseDate">
-                <span asp-validation-for="@Model.ReleaseDate" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="form-group d-flex flex-column">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Opis</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control formStyles" asp-for="@Model.Description">
-            </div>
-        </div>
-        <button type="submit" class="btn btn-primary mb-2">Dodaj</button>
-    </form>
+    </div>
+
 }
 
 @section Scripts {

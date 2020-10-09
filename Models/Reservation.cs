@@ -13,7 +13,7 @@ namespace RentBook.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime CreatedDate { get; set; }
-        public int ApplicationUserId { get; set; }
+        public string ApplicationUserId { get; set; }
         public int BookId { get; set; }
         [ForeignKey("BookId")]
         public Book Book { get; set; }

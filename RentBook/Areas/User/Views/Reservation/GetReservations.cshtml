@@ -1,0 +1,32 @@
+﻿@model List<RentBook.Models.ViewModels.ReservationViewModel>
+@{
+    ViewData["Title"] = "GetReservations";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (Model.Count() != 0)
+{
+    <div class="container pt-5">
+        <table class="table table-striped table-responsive-sm table-bordered text-center Roboto" style="font-size:100%;">
+            <thead class="tableHead">
+                <tr>
+                    <th scope="col">Data rezerwacji</th>
+                    <th scope="col">Nazwa użytkownika</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var reservation in Model)
+                {
+                    <tr>
+
+                        <td style="width:50%;">@reservation.CreatedDate</td>
+                        <td style="width:50%;">@reservation.ApplicationUserName</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+} else
+{
+    <div class="container pt-5"><h1>Brak rezerwacji dla wybranej książki</h1></div>
+}
+
